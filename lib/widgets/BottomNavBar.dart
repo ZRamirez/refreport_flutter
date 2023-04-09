@@ -11,7 +11,7 @@ class MyBottomNavBar extends StatefulWidget {
 
 class _MyBottomNavBarState extends State<MyBottomNavBar> {
   int _selectedIndex = 0;
-
+  late String _title;
   final List<Widget> _pages = [
     HomePage(),
     SchedulePage(),
@@ -22,6 +22,28 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      switch (index) {
+        case 0:
+          {
+            _title = 'Home';
+          }
+          break;
+        case 1:
+          {
+            _title = 'Schedule';
+          }
+          break;
+        case 2:
+          {
+            _title = 'Messages';
+          }
+          break;
+        case 3:
+          {
+            _title = 'Account';
+          }
+          break;
+      }
     });
   }
 

@@ -12,11 +12,6 @@ void main() {
 class MainApp extends StatelessWidget {
   MainApp({super.key});
 
-  final AppBar appBar = AppBar(
-    title: Text('RefReport'),
-    shadowColor: Colors.blue,
-  );
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,10 +20,7 @@ class MainApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: appBar,
-        body: Center(
-          child: Text('Welcome to my app!'),
-        ),
+        body: MyBottomNavBar(),
       ),
       routes: {
         '/account': (context) => AccountPage(),
