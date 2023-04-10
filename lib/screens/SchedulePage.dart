@@ -13,14 +13,16 @@ class _SchedulePageState extends State<SchedulePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(_title)),
+      appBar: AppBar(
+        title: Text(_title),
+        centerTitle: true,
+      ),
     );
   }
 }
